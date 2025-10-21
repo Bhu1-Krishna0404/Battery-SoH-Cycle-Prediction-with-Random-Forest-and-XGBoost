@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - Battery Analytics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f8fafc;
+    }
+
+    /* Custom Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: white;
+      border-bottom: 1px solid #e2e8f0;
+      margin-bottom: 2rem;
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar svg {
+      margin-right: 1rem;
+    }
+
+    .navbar .title {
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: #1e293b;
+    }
+
+    .navbar .subtitle {
+      font-size: 0.875rem;
+      color: #64748b;
+    }
+
+    .navbar-links a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: 500;
+    }
+
+    .navbar-links a:hover {
+      text-decoration: underline;
+    }
+
+    .card {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-control {
+      border-radius: 0.5rem;
+    }
+
+    .btn-primary {
+      background-color: #2563eb;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-weight: 500;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+    }
+
+    .btn-primary:hover {
+      background-color: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="#2563EB" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="7" width="18" height="10" rx="2" fill="#2563EB"/>
+        <rect x="20" y="10" width="2" height="4" rx="1" fill="#2563EB"/>
+        <rect x="4" y="9" width="14" height="6" rx="1" fill="white"/>
+        <rect x="4.5" y="9.5" width="6" height="5" rx="0.5" fill="#2563EB"/>
+      </svg>
+      <div>
+        <div class="title">BatteryPredict</div>
+        <div class="subtitle">Health & Lifetime Analytics</div>
+      </div>
+    </div>
+    <div class="navbar-links">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('login') }}">Login</a>
+      </div>
+  </nav>
+
+  <!-- Registration Section -->
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        
+        <!-- Header -->
+        <div class="text-center mb-4">
+          <i class="fas fa-user-plus fa-2x text-primary"></i>
+          <h2 class="fw-bold mt-2">Create Your Account</h2>
+          <p class="text-muted">Join Battery Analytics and start predicting battery health.</p>
+        </div>
+
+        <!-- Registration Card -->
+        <div class="card p-4">
+          <form method="POST" action="{{ url_for('register') }}">
+            
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" name="username" id="username" class="form-control" required placeholder="Enter username">
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" name="password" id="password" class="form-control" required placeholder="Create a password">
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-user-plus me-1"></i> Register
+              </button>
+            </div>
+
+            <div class="text-center mt-3">
+              <small>Already have an account? 
+                <a href="{{ url_for('login') }}" class="text-decoration-none text-primary">Login here</a>
+              </small>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

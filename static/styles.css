@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    text-align: center;
+    padding-top: 60px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.login-box, .form-box, .result-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.1);
+    width: 400px;
+    margin: auto;
+}
+
+input, select {
+    padding: 10px;
+    margin: 8px 0;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button, .btn {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn.logout {
+    background: #f44336;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+.chart {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+}
